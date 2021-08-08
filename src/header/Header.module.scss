@@ -1,0 +1,39 @@
+@import './src/common/styles/scss/variables';
+@import './src/common/styles/scss/mixins';
+
+.headerBlock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  height: 80px;
+  background-color: $bgColorSecond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+
+  &::after {
+    content: '';
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+
+  .headerContainer {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .name {
+      @include text($titleText, 2.5vh, 1.8, 3px, $descriptionTextColor, 200)
+    }
+  }
+}

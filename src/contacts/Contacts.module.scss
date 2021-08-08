@@ -1,0 +1,120 @@
+@import './src/common/styles/scss/variables';
+@import './src/common/styles/scss/mixins';
+
+.contactsBlock {
+  min-height: 50vh;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+
+  .contactsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .form {
+      width: 80%;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .nameEmail {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-self: stretch;
+        margin-right: -15px;
+        margin-left: -15px;
+
+        .name {
+          flex: 0 0 50%;
+          max-width: 50%;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-bottom: 1rem;
+
+        }
+
+        .email {
+          flex: 0 0 50%;
+          max-width: 50%;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-bottom: 1rem;
+        }
+
+        & input {
+          @include text($text, 16px, 1.8, 1px, $descriptionTextColor, 400);
+          background-color: #1e1e1e;
+          width: 100%;
+          padding: 15px 30px;
+          height: auto;
+          border-radius: 2px;
+          overflow: hidden;
+          border: 1px solid $borderColor;
+          color: $textColor;
+        }
+      }
+
+      .message {
+        box-sizing: border-box;
+        align-self: stretch;
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-bottom: 2rem;
+
+        .textMessage {
+          padding-left: 15px;
+          padding-right: 15px;
+
+          & textarea {
+            @include text($text, 16px, 1.8, 1px, $descriptionTextColor, 400);
+            background-color: #1e1e1e;
+            width: 100%;
+            padding: 15px 30px;
+            min-height: 150px;
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid $borderColor;
+            color: $textColor;
+            resize: none;
+
+          }
+        }
+      }
+
+      .send {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & button {
+          @include text($text, 16px, 1.8, 1px, $textColor, 600);
+          padding: 10px 40px;
+          background-color: $primaryColor;
+          border-radius: 5px;
+          width: content-box;
+          outline: none;
+          border: 2px solid $primaryColor;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-color: $bgColorSecond;
+            color: $primaryColor;
+            transition: all 0.6s ease-in-out;
+            cursor: pointer;
+          }
+        }
+      }
+
+      @media screen and (max-width: 830px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+

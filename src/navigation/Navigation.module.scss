@@ -1,0 +1,31 @@
+@import './src/common/styles/scss/variables';
+@import './src/common/styles/scss/mixins';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    & li a {
+      @include text($titleText, 12px, 1.2, 1px, $descriptionTextColor, 700);
+      margin-left: 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $borderColor;
+        cursor: pointer;
+      }
+    }
+
+    .active {
+      color: $primaryColor;
+    }
+
+
+  }
+}

@@ -1,0 +1,46 @@
+@import './src/common/styles/scss/mixins';
+@import './src/common/styles/scss/variables';
+
+.footerBlock {
+  min-height: 300px;
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: center;
+
+  .footerContainer {
+    flex-direction: column;
+    justify-content: space-between;
+
+    .fullName {
+      @include text($titleText, 2.5vh, 1.8, 2px, $textColor, 300);
+      margin-bottom: 1vh;
+    }
+
+    .messengerContainer {
+      width: 900px;
+      margin-bottom: 7vh;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .mobEmail {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-decoration: none;
+        @include text($titleText, 2.5vh, 1.8, 2px, $descriptionTextColor, 300);
+        & img {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .rights {
+      @include text($titleText, 14px, 1.2, 3px, $textColor, 300);
+    }
+  }
+}
+
+

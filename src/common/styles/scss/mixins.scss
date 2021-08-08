@@ -1,0 +1,10 @@
+@import './src/common/styles/scss/variables';
+
+@mixin text($fontFamily, $fontSize, $lineHeight, $letterSpacing, $color, $fontWeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  color: $color;
+  font-weight: $fontWeight;
+}

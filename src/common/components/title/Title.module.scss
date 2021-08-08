@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  margin-bottom: 50px;
+
+  & h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    z-index: 1;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  &::after {
+    content: '';
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    bottom: -20px;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
