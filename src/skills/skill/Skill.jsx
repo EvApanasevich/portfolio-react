@@ -4,7 +4,6 @@ import style from './Skill.module.scss'
 export const Skill = (props) => {
     const {
         title,
-        description,
         tool,
         icon
     } = props
@@ -14,9 +13,9 @@ export const Skill = (props) => {
             <div className={style.icon} style={icon}>
             </div>
             <div className={style.skillInfo}>
-                <h5>development</h5>
-                <h6>React, Redux</h6>
-                <p>development react app with state management redux</p>
+                <h5>{title}</h5>
+                <h6>{tool}</h6>
+                <p>Developed a single page application using next technologies</p>
             </div>
         </div>
     )

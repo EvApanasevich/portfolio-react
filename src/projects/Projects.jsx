@@ -26,11 +26,15 @@ export const Projects = () => {
                     <Title title={'My projects'}/>
                 <Fade>
                     <div className={style.projects}>
-                        <Project styleImg={socialStyle} title={'Social-network'}
-                                 description={'ghdhg fgjghj '}/>
-                        <Project styleImg={todoStyle} title={'Todo-List'} description={'j ghjghjhg jghjytjhg'}/>
-                        <Project styleImg={counterStyle} title={'Counter'}
-                                 description={'ghdhg fgjghj ghjg '}/>
+                        <Project src={'https://evapanasevich.github.io/social-network/'}
+                                 styleImg={socialStyle} title={'Social-network'}
+                                 description={'Social network: research project, sharpening skills'}/>
+                        <Project src={'https://evapanasevich.github.io/todolist/'}
+                                 styleImg={todoStyle} title={'Todo-List'}
+                                 description={'To do list for every day on the week'}/>
+                        <Project src={'https://evapanasevich.github.io/counter/'}
+                                 styleImg={counterStyle} title={'Counter'}
+                                 description={'My first project with React. I left It here as a memory.'}/>
                     </div>
                 </Fade>
             </div>

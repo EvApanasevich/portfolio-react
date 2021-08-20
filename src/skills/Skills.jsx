@@ -30,10 +30,10 @@ export const Skills = () => {
                     <Title title={'My skills'}/>
                 <Fade>
                     <div className={style.skills}>
-                        <Skill icon={devIcon} title={'Java'} description={'jhdvc'} tool={'react'}/>
-                        <Skill icon={briefcaseIcon} title={'Java'} description={'jhdvc'} tool={'react'}/>
-                        <Skill icon={clipboardIcon} title={'Java'} description={'jhdvc'} tool={'react'}/>
-                        <Skill icon={diamondIcon} title={'Java'} description={'jhdvc'} tool={'react'}/>
+                        <Skill icon={devIcon} title={'Development'} tool={'React, Redux, Axios etc'}/>
+                        <Skill icon={briefcaseIcon} title={'Foundation'} tool={'JavaScript, TypeScript, HTML5, CSS3(scss)'}/>
+                        <Skill icon={clipboardIcon} title={'Testing'} tool={'Unit Tests, Storybook'}/>
+                        <Skill icon={diamondIcon} title={'Design'} tool={'Material UI, Ant-Design etc'}/>
                     </div>
                 </Fade>
             </div>

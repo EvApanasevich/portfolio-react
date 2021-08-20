@@ -24,13 +24,12 @@ export const Footer = () => {
                             <img src={email}/>
                             <div>EvApanasevich@yandex.ru</div>
                         </div>
-                        <a href='' className={style.mobEmail}>
+                        <a href='https://t.me/zhekaDev' className={style.mobEmail}>
                             <img src={telega}/>
                             <div>Telegram</div>
                         </a>
                     </Fade>
                 </div>
-
                 <h3 className={style.rights}>© 2021, All Rights Reserved.</h3>
             </div>
         </div>

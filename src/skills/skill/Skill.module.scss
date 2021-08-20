@@ -6,7 +6,7 @@
   background-color: $bgColor;
   border-radius: 5px;
   border: 1px solid $borderColor;
-  width: 45%;
+  width: 20%;
   padding: 1rem !important;
   margin-bottom: 30px;
   display: flex;
@@ -32,21 +32,25 @@
 
   .skillInfo {
     & h5 {
-      @include text($titleText, 18px, 1.2, 1px, $textColor, 500)
+      @include text($titleText, 18px, 1.2, 1px, $textColor, 500);
+      text-align: center;
     }
 
     & h6 {
       @include text($text, 14px, 1.2, 1px, $textColor, 700);
+      width: 100%;
       background-color: $primaryColor;
       border-radius: .25rem;
       margin-bottom: 0.5rem;
       margin-top: 1rem;
       padding: 0.1em 0.3em;
       display: inline-block;
+      text-align: center;
     }
 
     & p {
-      @include text($text, 16px, 1.8, 1px, $descriptionTextColor, 400)
+      @include text($text, 16px, 1.8, 1px, $descriptionTextColor, 400);
+      text-align: center;
     }
   }
 }

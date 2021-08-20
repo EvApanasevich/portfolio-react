@@ -13,16 +13,13 @@
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0.3;
+      opacity: 0.1;
     }
 
     .greeting {
       min-width: 300px;
 
       .typing {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
         color: $primaryColor;
       }
 

@@ -6,12 +6,13 @@ export const Project = (props) => {
         title,
         description,
         styleImg,
+        src
     } = props
 
     return (
         <div className={style.project}>
             <div className={style.imgContainer} style={styleImg}>
-                <a className={style.linkBtn}>
+                <a href={src} className={style.linkBtn}>
                     View project
                 </a>
             </div>
