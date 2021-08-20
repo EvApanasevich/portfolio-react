@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import style from './Contacts.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import {Title} from "../common/components/title/Title";
 import {Fade} from "react-reveal";
 import {useFormik} from "formik";
 import axios from 'axios'
+import {Modal} from "../common/components/modal/Modal";
 
 export const Contacts = () => {
+
+    const [modalActive, setModalActive] = useState(false)
+    const [disable, setDisable] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -15,16 +19,19 @@ export const Contacts = () => {
             message: ''
         },
         onSubmit: values => {
+            setDisable(true)
             axios.post('https://nodejs-server-sendler.herokuapp.com/send-message', {
                 name: values.name,
                 email: values.email,
                 message: values.message
             })
                 .then(() => {
-                    alert('message sent')
-                })
+                    setDisable(false)
+                    formik.resetForm()
+                    setModalActive(true)
+                    setTimeout(() => setModalActive(false), 2500)
 
-            formik.resetForm()
+                })
         },
     })
 
@@ -55,9 +62,10 @@ export const Contacts = () => {
                             </div>
                         </div>
                         <div className={style.send}>
-                            <button type={'submit'}>Send</button>
+                            <button disabled={disable} type={'submit'}>Send</button>
                         </div>
                     </form>
+                    <Modal active={modalActive} setActive={setModalActive} text={'Message has been sent!'}/>
                 </Fade>
             </div>
         </div>
