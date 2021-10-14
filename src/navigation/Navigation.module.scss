@@ -3,16 +3,20 @@
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 100%;
 
   & ul {
+    width: 50%;
     display: flex;
-    flex-direction: row;
+   //  flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 20px;
     list-style: none;
 
     & li a {
-      @include text($titleText, 12px, 1.2, 1px, $descriptionTextColor, 700);
-      margin-left: 40px;
+      @include text($titleText, 16px, 1.2, 1px, $descriptionTextColor, 700);
+      padding-left: 30px;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -25,7 +29,8 @@
     .active {
       color: $primaryColor;
     }
-
-
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }

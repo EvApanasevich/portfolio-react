@@ -30,7 +30,6 @@ export const Contacts = () => {
                     formik.resetForm()
                     setModalActive(true)
                     setTimeout(() => setModalActive(false), 2500)
-
                 })
         },
     })

@@ -1,0 +1,98 @@
+@import "./src/common/styles/scss/variables";
+@import "./src/common/styles/scss/mixins";
+
+.burgerNav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+
+   .burgerNavItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: silver;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 30vh;
+      padding: 20px;
+      transform: translate(0, -30vh);
+      transition: 0.5s;
+      opacity: 1;
+
+      .link {
+         @include text($titleText, 16px, 1.2, 1px, $descriptionTextColor, 700);
+         text-decoration: none;
+         text-transform: uppercase;
+
+         &:hover {
+            color: $borderColor;
+            cursor: pointer;
+         }
+      }
+
+      .active {
+         color: $primaryColor;
+      }
+   }
+
+   .show {
+      transform: translate(0, 0);
+   }
+
+   .burgerBtn {
+      width: 30px;
+      height: 19px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      &::before {
+         content: "";
+         background-color: $primaryColor;
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 0;
+         border-radius: 2px;
+         transition: 0.3s;
+      }
+      &::after {
+         content: "";
+         background-color: $primaryColor;
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         bottom: 0;
+         border-radius: 2px;
+         transition: 0.3s;
+      }
+      & span {
+         background-color: $primaryColor;
+         position: absolute;
+         width: 100%;
+         height: 3px;
+         top: 8px;
+         border-radius: 2px;
+         transition: 0.3s;
+      }
+   }
+   .activeBtn.burgerBtn:before {
+      transform: rotate(45deg);
+      top: 8px;
+   }
+   .activeBtn.burgerBtn:after {
+      transform: rotate(-45deg);
+      bottom: 8px;
+   }
+   .activeBtn.burgerBtn span {
+      transform: scale(0);
+   }
+
+   @media screen and (min-width: 768px) {
+      display: none;
+   }
+}
