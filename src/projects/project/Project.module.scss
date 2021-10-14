@@ -2,7 +2,9 @@
 @import './src/common/styles/scss/mixins';
 
 .project {
-  width: 300px;
+  max-width: 300px;
+  min-width: 200px;
+  margin: 10px;
   background-color: $bgColorSecond;
   border-radius: 5px;
   border: 1px solid $borderColor;

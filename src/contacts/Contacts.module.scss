@@ -24,23 +24,20 @@
       .nameEmail {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-self: stretch;
         margin-right: -15px;
         margin-left: -15px;
 
         .name {
           flex: 0 0 50%;
-          max-width: 50%;
           padding-left: 15px;
           padding-right: 15px;
           margin-bottom: 1rem;
-
         }
 
         .email {
           flex: 0 0 50%;
-          max-width: 50%;
           padding-left: 15px;
           padding-right: 15px;
           margin-bottom: 1rem;
@@ -110,8 +107,18 @@
         }
       }
 
-      @media screen and (max-width: 830px) {
+      @media screen and (max-width: 767px) {
         width: 100%;
+        .nameEmail {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+        .name {
+          align-self: stretch;
+        }
+        .email {
+          align-self: stretch;
+        }
       }
     }
   }
