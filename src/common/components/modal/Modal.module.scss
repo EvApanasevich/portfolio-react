@@ -25,6 +25,9 @@
     border-radius: 10px;
     background-color: #191919;
     width: 800px;
+    @media screen and (max-width: 767px) {
+      @include text($text, 20px, 1.8, 2px, $primaryColor, 400);
+    }
   }
 }
 

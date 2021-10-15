@@ -15,7 +15,6 @@ export const Main = () => {
                'enable': true,
                'value_area': 800
             },
-
          }
       }
    }
