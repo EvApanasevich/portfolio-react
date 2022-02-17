@@ -16,6 +16,9 @@
     .fullName {
       @include text($titleText, 2.5vh, 1.8, 2px, $textColor, 300);
       margin-bottom: 1vh;
+      @media screen and (max-width: 400px) {
+        @include text($titleText, 2vh, 1.8, 2px, $textColor, 300);
+      }
     }
 
     .messengerContainer {
@@ -31,6 +34,10 @@
         text-decoration: none;
         margin: 10px;
         @include text($titleText, 2.5vh, 1.8, 2px, $descriptionTextColor, 300);
+        @media screen and (max-width: 400px) {
+          @include text($titleText, 1.8vh, 1.8, 2px, $descriptionTextColor, 300);
+        }
+
         & img {
           width: 40px;
           height: 40px;
@@ -41,8 +48,12 @@
 
     .rights {
       @include text($titleText, 14px, 1.2, 3px, $textColor, 300);
+      @media screen and (max-width: 400px) {
+        @include text($titleText, 10px, 1.8, 2px, $textColor, 300);
+      }
     }
   }
 }
+
 
 
