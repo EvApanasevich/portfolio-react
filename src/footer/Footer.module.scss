@@ -8,6 +8,7 @@
   align-items: center;
 
   .footerContainer {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
@@ -18,8 +19,8 @@
     }
 
     .messengerContainer {
-      margin-bottom: 7vh;
       display: flex;
+      margin-bottom: 7vh;
       justify-content: space-between;
       flex-wrap: wrap;
 

@@ -57,10 +57,10 @@ export const Contacts = () => {
                             <div className={style.textMessage}>
                                 <textarea placeholder={'Your message...'}
                                           {...formik.getFieldProps('message')}
-                                ></textarea>
+                                />
                             </div>
                         </div>
-                        <div className={style.send}>
+                        <div className={style.send} >
                             <button disabled={disable} type={'submit'}>Send</button>
                         </div>
                     </form>
